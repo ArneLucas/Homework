@@ -1,0 +1,4 @@
+# 100 Days of Python
+
+Here's my homework for the Udemy-course:
+100 Days of Code: The Complete Python Pro Bootcamp for 2022 
