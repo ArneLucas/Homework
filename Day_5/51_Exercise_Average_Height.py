@@ -10,12 +10,16 @@ for n in range(0, len(student_heights)):
 
 # can't use sum() or len()
 
-total_height = 0
-n = 0
+def av_height_func(student_heights):
+  total_height = 0
+  num_of_heights = 0
+  for height in student_heights:
+      total_height += height
+      num_of_heights += 1
 
-for height in student_heights:
-    total_height += height
-    n += 1
+  ave_height = round(total_height / num_of_heights)
+  print(f"The average student height is {ave_height}")
 
-ave_height = round(total_height / n)
-print(f"The average student height is {ave_height}")
+av_height_func(student_heights)
+
+# av_height_func([150, 140, 130, 120, 110, 100])
