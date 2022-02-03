@@ -25,7 +25,7 @@ for symbol in range(0,nr_symbols + 1):
 for number in range(0,nr_numbers + 1):
     easy_pass += numbers[random.randint(0,(len(numbers)-1))]
     
-print(f"Here's your randomly created easy password: {easy_pass}")
+print(f"Here's your randomly created password (EASY): {easy_pass}")
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
@@ -44,4 +44,4 @@ for number in range(0,nr_numbers + 1):
 
 hard_pass_randomized = "".join(random.sample(hard_pass,len(hard_pass)))
 
-print(f"Here's your randomly created hard password: {hard_pass_randomized}")
+print(f"Here's your randomly created password (HARD): {hard_pass_randomized}")
