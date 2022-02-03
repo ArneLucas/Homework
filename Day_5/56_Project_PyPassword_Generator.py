@@ -16,13 +16,13 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 easy_pass = ("")
 
-for letter in range(0,nr_letters):
+for letter in range(0,nr_letters + 1):
     easy_pass += letters[random.randint(0,(len(letters)-1))]
 
-for symbol in range(0,nr_symbols):
+for symbol in range(0,nr_symbols + 1):
     easy_pass += symbols[random.randint(0,(len(symbols)-1))]
 
-for number in range(0,nr_numbers):
+for number in range(0,nr_numbers + 1):
     easy_pass += numbers[random.randint(0,(len(numbers)-1))]
     
 print(f"Here's your randomly created easy password: {easy_pass}")
@@ -30,16 +30,16 @@ print(f"Here's your randomly created easy password: {easy_pass}")
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-# get N random values from letters, then N random values from numbers, then N random values from symbols (and shake 'm and store them in hard_pass_randomized):
+# get N random values from letters, then N random values from numbers, then N random values from symbols (+ shake 'm up and store them in hard_pass_randomized):
 hard_pass = ("")
 
-for letter in range(0,nr_letters):
+for letter in range(0,nr_letters + 1):
     hard_pass += letters[random.randint(0,(len(letters)-1))]
 
-for symbol in range(0,nr_symbols):
+for symbol in range(0,nr_symbols + 1):
     hard_pass += symbols[random.randint(0,(len(symbols)-1))]
 
-for number in range(0,nr_numbers):
+for number in range(0,nr_numbers + 1):
     hard_pass += numbers[random.randint(0,(len(numbers)-1))]
 
 hard_pass_randomized = "".join(random.sample(hard_pass,len(hard_pass)))
