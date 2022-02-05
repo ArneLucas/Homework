@@ -18,7 +18,7 @@ stages = ['''
   +---+
   |   |
   O   |
- /|\  |    2 lifes left
+ /|\  |    2 lives left
       |
       |
 =========
@@ -26,14 +26,14 @@ stages = ['''
   +---+
   |   |
   O   |
- /|   |    3 lifes left
+ /|   |    3 lives left
       |
       |
 =========''', '''
   +---+
   |   |
   O   |
-  |   |    4 lifes left
+  |   |    4 lives left
       |
       |
 =========
@@ -41,7 +41,7 @@ stages = ['''
   +---+
   |   |
   O   |
-      |    5 lifes left
+      |    5 lives left
       |
       |
 =========
@@ -49,7 +49,7 @@ stages = ['''
   +---+
   |   |
       |
-      |    6 lifes left
+      |    6 lives left
       |
       |
 =========
