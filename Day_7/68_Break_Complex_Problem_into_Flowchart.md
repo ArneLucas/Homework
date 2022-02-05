@@ -1,0 +1,1 @@
+Hangman step 0.5: [flowchart](https://app.diagrams.net/#HArneLucas%2FHomework%2Fmaster%2FDay_7%2FHangman)
