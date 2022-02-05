@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-05T11:15:47.951Z" agent="5.0 (Windows)" etag="KP7ozBdTogIkGNhYXAZh" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-05T11:15:53.526Z" agent="5.0 (Windows)" etag="GPrpUkMlgmwSdKOdV1SX" version="16.5.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -34,7 +34,7 @@
           <mxGeometry x="240" y="490" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nC_amik7Q5Imt4TX2YTw-4" value="add letter to list of guessed letters" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;dashed=1;sketch=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="580" y="490" width="120" height="60" as="geometry" />
+          <mxGeometry x="480" y="490" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nC_amik7Q5Imt4TX2YTw-14" value="&lt;div&gt;Yes&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;labelBackgroundColor=none;verticalAlign=bottom;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="nC_amik7Q5Imt4TX2YTw-9" target="nC_amik7Q5Imt4TX2YTw-13">
           <mxGeometry relative="1" as="geometry" />
