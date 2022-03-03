@@ -5,8 +5,10 @@ import random
 import os
 
 
-def clearConsole(): return os.system(
-    'cls' if os.name in ('nt', 'dos') else 'clear')
+def clearConsole():
+    """Clears console when called"""
+    return os.system(
+        'cls' if os.name in ('nt', 'dos') else 'clear')
 
 
 def get_random_account():
