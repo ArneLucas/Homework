@@ -54,7 +54,7 @@ def game():
         print(vs)
         print(f"To B: {formatted_data(account_b)}")
 
-        guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+        guess = input("Who has more followers on Instagram? Type 'A' or 'B': ").lower()
         num_followers_a = account_a["follower_count"]
         num_followers_b = account_b["follower_count"]
         is_correct = check_answer(guess, num_followers_a, num_followers_b)
