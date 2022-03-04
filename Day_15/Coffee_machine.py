@@ -32,13 +32,9 @@ resources = {
     "money": 0,
 }
 
-# penny     € 0,01
-# nickel    € 0,05
-# dime      € 0,10
-# quarter   € 0,25
-
 
 def print_report():
+    """Prints formatted report"""
     water = resources["water"]
     milk = resources["milk"]
     coffee = resources["coffee"]
@@ -48,20 +44,22 @@ def print_report():
 
 
 def check_resources(MENU, coffee_choice):
+    """Checks if enough resources for coffee of choice"""
     water = MENU[coffee_choice]["ingredients"]["water"]
     milk = MENU[coffee_choice]["ingredients"]["milk"]
     coffee = MENU[coffee_choice]["ingredients"]["coffee"]
     if resources["water"] - water < 0:
-        return "Please refill water"
+        print("Please refill water")
     elif resources["milk"] - milk < 0:
-        return "Please refill milk"
+        print("Please refill milk")
     elif resources["coffee"] - coffee < 0:
-        return "Please refill coffee"
+        print("Please refill coffee")
     else:
         process_payment(MENU)
 
 
 def make_coffee(MENU, coffee_choice):
+    """Makes coffee of choice, and deducts resources"""
     resources["money"] += MENU[coffee_choice]["cost"]
     resources["coffee"] -= MENU[coffee_choice]["ingredients"]["coffee"]
     resources["milk"] -= MENU[coffee_choice]["ingredients"]["milk"]
@@ -70,6 +68,7 @@ def make_coffee(MENU, coffee_choice):
 
 
 def process_payment(MENU):
+    """Takes cost of coffee of choice, counts coins, and activates coffee making process"""
     total_paid = 0
     cost = float(MENU[coffee_choice]["cost"])
     while total_paid < cost:
@@ -81,27 +80,22 @@ def process_payment(MENU):
         if cost == total_paid:
             print("Thank you")
             make_coffee(coffee_choice, resources, MENU)
+        elif cost > total_paid:
+            print(
+                f"Sorry, that's not enoug money. € {total_paid} will be refunded")
         else:
             refund = total_paid - cost
             print(f"Here's € {refund} in change.")
             make_coffee(MENU, coffee_choice)
 
 
-# TODO: Prompt user by asking “​What would you like? (espresso/latte/cappuccino)
 machine_on = True
 while machine_on:
     coffee_choice = input(
         "What would you like? (espresso/latte/cappuccino):\n").lower()
-    # TODO: Turn off the Coffee Machine by entering “​off​” to the prompt
     if coffee_choice == "off":
         machine_on = False
-    # TODO: Print report.
     elif coffee_choice == "report":
         print_report()
     else:
         check_resources(MENU, coffee_choice)
-
-
-# TODO: Check resources sufficient?
-# TODO: Process coins.
-# TODO: Check transaction successful?
