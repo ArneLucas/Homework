@@ -43,6 +43,13 @@ def print_report():
         f"Water: {water} ml\nMilk: {milk} ml\nCoffee: {coffee} gr\nMoney: € {money}")
 
 
+def refill_machine(resources):
+    resources["water"] = 300
+    resources["milk"] = 200
+    resources["coffee"] = 100
+    print("Thanks for refilling.")
+
+
 def check_resources(MENU, coffee_choice):
     """Checks if enough resources for coffee of choice"""
     water = MENU[coffee_choice]["ingredients"]["water"]
@@ -56,15 +63,6 @@ def check_resources(MENU, coffee_choice):
         print("Please refill coffee")
     else:
         process_payment(MENU)
-
-
-def make_coffee(MENU, coffee_choice):
-    """Makes coffee of choice, and deducts resources"""
-    resources["money"] += MENU[coffee_choice]["cost"]
-    resources["coffee"] -= MENU[coffee_choice]["ingredients"]["coffee"]
-    resources["milk"] -= MENU[coffee_choice]["ingredients"]["milk"]
-    resources["water"] -= MENU[coffee_choice]["ingredients"]["water"]
-    print(f"Enjoy your {coffee_choice} ☕. Next costumer please.")
 
 
 def process_payment(MENU):
@@ -89,6 +87,15 @@ def process_payment(MENU):
             make_coffee(MENU, coffee_choice)
 
 
+def make_coffee(MENU, coffee_choice):
+    """Makes coffee of choice, and deducts resources"""
+    resources["money"] += MENU[coffee_choice]["cost"]
+    resources["coffee"] -= MENU[coffee_choice]["ingredients"]["coffee"]
+    resources["milk"] -= MENU[coffee_choice]["ingredients"]["milk"]
+    resources["water"] -= MENU[coffee_choice]["ingredients"]["water"]
+    print(f"Enjoy your {coffee_choice} ☕. Next costumer please.")
+
+
 machine_on = True
 while machine_on:
     coffee_choice = input(
@@ -97,5 +104,7 @@ while machine_on:
         machine_on = False
     elif coffee_choice == "report":
         print_report()
+    elif coffee_choice == "refill":
+        refill_machine(resources)
     else:
         check_resources(MENU, coffee_choice)
