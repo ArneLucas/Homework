@@ -55,11 +55,11 @@ def check_resources(MENU, coffee_choice):
     water = MENU[coffee_choice]["ingredients"]["water"]
     milk = MENU[coffee_choice]["ingredients"]["milk"]
     coffee = MENU[coffee_choice]["ingredients"]["coffee"]
-    if resources["water"] - water < 0:
+    if resources["water"] < water:
         print("Please refill water")
-    elif resources["milk"] - milk < 0:
+    elif resources["milk"] < milk:
         print("Please refill milk")
-    elif resources["coffee"] - coffee < 0:
+    elif resources["coffee"] < coffee:
         print("Please refill coffee")
     else:
         process_payment(MENU)
@@ -77,7 +77,7 @@ def process_payment(MENU):
         total_paid += 0.01 * int(input("How many pennies? "))
         if cost == total_paid:
             print("Thank you")
-            make_coffee(coffee_choice, resources, MENU)
+            make_coffee(MENU, coffee_choice)
         elif cost > total_paid:
             print(
                 f"Sorry, that's not enoug money. € {total_paid} will be refunded")
@@ -97,6 +97,7 @@ def make_coffee(MENU, coffee_choice):
 
 
 machine_on = True
+
 while machine_on:
     coffee_choice = input(
         "What would you like? (espresso/latte/cappuccino):\n").lower()
