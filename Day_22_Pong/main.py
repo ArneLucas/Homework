@@ -34,7 +34,7 @@ while game_is_on:
         ball.bounce_x()
 
     # if ball.xcor() > 320 and (r_paddle.ycor() + 50) < ball.ycor() > (r_paddle.ycor() - 50):
-    #     ball.bounce_horizontal()
+    #     ball.bounce_x()
     # print(f"paddle_y: {r_paddle.ycor()}")
     # print(f"ball_y: {int(ball.ycor())}")
     # print(f"ball_x: {int(ball.xcor())}")
